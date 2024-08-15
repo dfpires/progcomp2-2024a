@@ -1,3 +1,4 @@
+/*
 // cria uma função que soma dois valores
 // a função se chama soma e recebe 2 parâmetros
 function soma(a, b){
@@ -52,6 +53,7 @@ Dentro dessa função, some todos os números pares (sem
 usar vetores). A função deve retornar o resultado da 
 soma.*/
 
+/*
 let somarPares = () => {
     let soma = 0
     for(let i=1;i<=20;i++){
@@ -62,3 +64,31 @@ let somarPares = () => {
     return soma
 }
 console.log(somarPares())
+
+// função que recebe um nome (string), a posição inicial e a final desejada
+let pedaco = (nome, posInicio, posFinal) => {
+    return nome.slice(posInicio, posFinal)
+}
+
+console.log(pedaco("Carlos Eduardo", 0, 6)) // carlos
+console.log(pedaco("Carlos Eduardo", 7, 14)) // eduardo
+console.log(pedaco("Carlos Eduardo", 7, 32)) // eduardo
+*/
+
+let carros = ["Onix", "Palio", "Gol", "Uno"]
+
+carros.map( carro => console.log(carro))
+
+let numeros = [10, 20, 30, 40]
+// multiplica por 2 todos os elementos do vetor
+// map retorna um novo vetor
+let dobrado = numeros.map(numero => numero * 2)
+console.log(dobrado)
+
+carros.map( (carro, posicao) => console.log(carro + " " + posicao))
+
+let maiscula = carros.map( carro => carro.toUpperCase())
+console.log(maiscula)
+
+let concatena = carros.map( carro => carro.concat(" - Processada"))
+console.log(concatena)
