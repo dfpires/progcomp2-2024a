@@ -74,7 +74,7 @@ console.log(pedaco("Carlos Eduardo", 0, 6)) // carlos
 console.log(pedaco("Carlos Eduardo", 7, 14)) // eduardo
 console.log(pedaco("Carlos Eduardo", 7, 32)) // eduardo
 */
-
+/*
 let carros = ["Onix", "Palio", "Gol", "Uno"]
 
 carros.map( carro => console.log(carro))
@@ -92,3 +92,44 @@ console.log(maiscula)
 
 let concatena = carros.map( carro => carro.concat(" - Processada"))
 console.log(concatena)
+*/
+
+let parImpar = (numero) => {
+    if (numero % 2 == 0){
+        return true
+    }
+    else {
+        return false
+    }
+}
+console.log(parImpar(4))
+console.log(parImpar(5))
+// usando o operador ternário
+let parImparOT = (numero) => {
+    return (numero % 2 == 0) ? true : false
+}
+console.log(parImparOT(4))
+console.log(parImparOT(5))
+// deixando mais clean code
+let parImparCC = (numero) => numero % 2 == 0
+console.log(parImparCC(4))
+console.log(parImparCC(5))
+
+let media = (a, b, c) => {
+    return (a + b + c) / 3
+}
+console.log(media(4, 5, 6))
+
+// diferença entre map e filter
+let vetor = [1, 2, 3, 4]
+let soma10 = vetor.map( numero => numero + 10)
+console.log(soma10)
+
+let imparesMap = vetor.map(numero => numero % 2 == 1)
+console.log(imparesMap)
+
+let imparesFilter = vetor.filter(numero => numero % 2 == 1)
+console.log(imparesFilter)
+
+let nome = " Japão "
+console.log(nome.trim())
