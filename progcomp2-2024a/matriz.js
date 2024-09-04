@@ -69,7 +69,7 @@ let matrizPares = matriz.map(
 )
 console.log(matrizPares)
 
-// mostrar a soma de cada uma das linhas do vetor
+// mostrar a soma da matriz 
 let soma = 0
 matriz.forEach ( 
     vet => vet.forEach (
@@ -77,6 +77,7 @@ matriz.forEach (
     )
 console.log(`A soma total é ${soma}`)
 
+// mostrar a soma de cada uma das linhas do vetor
 let x = matriz.forEach ( vet => {   
     soma = 0
     vet.forEach ( elemento => soma = soma + elemento)
