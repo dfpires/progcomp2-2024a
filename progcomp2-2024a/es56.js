@@ -1,4 +1,4 @@
-/*
+
 // cria uma função que soma dois valores
 // a função se chama soma e recebe 2 parâmetros
 function soma(a, b){
@@ -6,7 +6,9 @@ function soma(a, b){
     console.log(`Resultado da soma ${result}`)
 }
 // chamar a função criada
-soma(4, 9)
+let a = 4
+let b = 9
+soma(a, b)
 // função que recebe 2 parâmetros e retorna a multiplicação deles
 function multiplicacao(a, b){
     let result = a * b
@@ -24,6 +26,7 @@ boaNoite()
 // funções anônimas - função sem nome
 // variável passa a ser uma função
 let subtracao = function (a, b){
+
     let result = a - b
     console.log(`Resultado da subtração ${result}`)
 }
@@ -53,7 +56,7 @@ Dentro dessa função, some todos os números pares (sem
 usar vetores). A função deve retornar o resultado da 
 soma.*/
 
-/*
+
 let somarPares = () => {
     let soma = 0
     for(let i=1;i<=20;i++){
@@ -73,26 +76,35 @@ let pedaco = (nome, posInicio, posFinal) => {
 console.log(pedaco("Carlos Eduardo", 0, 6)) // carlos
 console.log(pedaco("Carlos Eduardo", 7, 14)) // eduardo
 console.log(pedaco("Carlos Eduardo", 7, 32)) // eduardo
-*/
-/*
+
 let carros = ["Onix", "Palio", "Gol", "Uno"]
 
-carros.map( carro => console.log(carro))
+carros.forEach(
+    carro => console.log(carro)
+)
 
 let numeros = [10, 20, 30, 40]
 // multiplica por 2 todos os elementos do vetor
 // map retorna um novo vetor
-let dobrado = numeros.map(numero => numero * 2)
+let dobrado = numeros.map(
+        numero => numero * 2
+    )
 console.log(dobrado)
 
-carros.map( (carro, posicao) => console.log(carro + " " + posicao))
+carros.forEach( 
+    (carro, posicao) => console.log(carro + " " + posicao)
+)
 
-let maiscula = carros.map( carro => carro.toUpperCase())
+let maiscula = carros.map( 
+    carro => carro.toUpperCase()
+)
 console.log(maiscula)
 
-let concatena = carros.map( carro => carro.concat(" - Processada"))
+let concatena = carros.map( 
+    carro => carro.concat(" - Processada")
+)
 console.log(concatena)
-*/
+
 
 let parImpar = (numero) => {
     if (numero % 2 == 0){
@@ -122,14 +134,21 @@ console.log(media(4, 5, 6))
 
 // diferença entre map e filter
 let vetor = [1, 2, 3, 4]
-let soma10 = vetor.map( numero => numero + 10)
+let soma10 = vetor.map( 
+    numero => numero + 10
+)
 console.log(soma10)
 
-let imparesMap = vetor.map(numero => numero % 2 == 1)
+let imparesMap = vetor.map(
+    numero => numero % 2 == 1
+)
 console.log(imparesMap)
 
-let imparesFilter = vetor.filter(numero => numero % 2 == 1)
+let imparesFilter = vetor.filter(
+    numero => numero % 2 == 1
+)
 console.log(imparesFilter)
 
 let nome = " Japão "
 console.log(nome.trim())
+

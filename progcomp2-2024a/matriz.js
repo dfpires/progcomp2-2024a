@@ -30,10 +30,12 @@ console.log(`Apresente apenas os elementos da coluna 2`)
 for(let i = 0; i < 3; i++){
     console.log(mat[i][2])
 }
-*/
+
 
 let vetor = [1, 2, 3, 4]
-vetor.map(elemento => console.log(elemento))
+vetor.forEach(
+    elemento => console.log(elemento)
+)
 
 let matriz = [
     [1, 2, 3, 4],
@@ -41,8 +43,8 @@ let matriz = [
     [9, 10, 11, 12]
 ]
 // percorre a matriz
-matriz.map( 
-        vet =>vet.map( 
+matriz.forEach( 
+        vet =>vet.forEach( 
                 elemento => console.log(elemento) 
             ) 
         )
@@ -78,9 +80,20 @@ matriz.forEach (
 console.log(`A soma total é ${soma}`)
 
 // mostrar a soma de cada uma das linhas do vetor
-let x = matriz.forEach ( vet => {   
-    soma = 0
-    vet.forEach ( elemento => soma = soma + elemento)
-    console.log(`Somas parciais ${soma}`)
-    })
-
+matriz.forEach( 
+    vet => {   
+        soma = 0
+        vet.forEach ( 
+            elemento => soma = soma + elemento
+        )
+        console.log(`Somas parciais ${soma}`)
+    }
+)
+*/
+let mat1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+let vetSoma = mat1.map(
+    vetor => vetor.reduce(
+        (acum, elem) => acum + elem, 0
+    )
+)
+console.log(vetSoma)
